@@ -30,6 +30,7 @@ const Home: NextPage = () => {
 
 
 	return (
+
 		<ContentContainer>
 			<Head>
 				<title>Todo application</title>

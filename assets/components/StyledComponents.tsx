@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const ContentContainer = styled.div`
 	width: 1000px;
@@ -13,26 +14,16 @@ export const HeaderContent = styled.header`
 
 export const AppTitle = styled.h1``;
 
-export const CreateTaskForm = styled.form<{
-    isExists: boolean
-}>(({
-    isExists
-}) => `
-	width: 100%;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	margin-block: 1rem;
-	justify-content: space-between;
-	transition: 300ms ease;
-	${!isExists && `
-		height: 0;
-		opacity: 0;
-		overflow: hidden;
-		margin-top: .25rem;
-	`}
-`);
+export const CreateTaskForm = styled(motion.form)`
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-block: 1rem;
+justify-content: space-between;
+transition: 300ms ease;
+`
 
 export const CreateTaskInput = styled.input`
     width: 100%;
@@ -70,6 +61,12 @@ export const DeleteAllButton = styled.button`
 	border-radius: 5px;
 	padding: .5rem;
 	margin-left: 85%;
+	transition: 300ms ease;
+
+	&:hover{
+		background: red;
+	}
+
 `;
 
 export const TodoList = styled.ul`
@@ -122,9 +119,9 @@ export const TabButton = styled.button`
 `;
 
 export const TabList = styled.ul<{
-    tabIndex: number
+	tabIndex: number
 }>(({
-    tabIndex
+	tabIndex
 }) => `
 	width: 100%;
 	justify-content: space-between;

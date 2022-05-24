@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { AddNewTodo } from '../redux/actions/CreateNewTodo.action';
 import { IFormProps } from '../types/Props.type';
 import { CreateTaskButton, CreateTaskForm, CreateTaskInput } from "./StyledComponents"
+import { AnimatePresence } from 'framer-motion';
+import { FormVariants } from '../variants/Variants';
 
 export const FormComponent: React.FC<IFormProps> = (props) => {
     const createFormRef = useRef<HTMLFormElement>();
@@ -19,12 +21,23 @@ export const FormComponent: React.FC<IFormProps> = (props) => {
 
     }
 
-    return <CreateTaskForm
-        isExists={props.currentTab.tab !== "Completed"}
-        as={CreateTaskForm}
-        ref={createFormRef}
-    >
-        <CreateTaskInput placeholder='Add todo...' />
-        <CreateTaskButton onClick={(e: React.SyntheticEvent) => createNewTodo(e)}>Add</CreateTaskButton>
-    </CreateTaskForm>
+    return <AnimatePresence>
+        {
+            props.currentTab.tab !== 'Completed' &&
+            <CreateTaskForm
+                initial={FormVariants.removed}
+                animate={FormVariants.exists}
+                exit={FormVariants.removed}
+                style={{
+                    transition: "300ms linear"
+                }}
+                as={CreateTaskForm}
+                ref={createFormRef}
+            >
+                <CreateTaskInput placeholder='Add todo...' />
+                <CreateTaskButton onClick={(e: React.SyntheticEvent) => createNewTodo(e)}>Add</CreateTaskButton>
+            </CreateTaskForm>
+        }
+    </AnimatePresence>
+
 }

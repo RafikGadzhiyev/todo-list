@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/RafikGadzhiyev/todo-list">
       Solution
     </a>
     <span> | </span>
@@ -50,8 +50,12 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/)
+- [Styled components](https://styled-components.com/)
+- [Framer motion](https://www.framer.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Redux](https://redux.js.org/)
+- [SASS](https://sass-lang.com/guide)
 
 ## Features
 
@@ -86,6 +90,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@RafikGadzhiyev](https://github.com/RafikGadzhiyev)
+- LinkedIn [Rafik Gajiyev](https://www.linkedin.com/in/rafik-gajiyev-67283b21a/)

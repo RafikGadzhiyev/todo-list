@@ -7,20 +7,22 @@ import {
     TodoContentContainer,
     DeleteButton,
 } from "./StyledComponents";
+import { AnimatePresence } from "framer-motion";
 
 export const TodoComponent: React.FC<ITodoProps> = (props) => {
     const dispatch: React.Dispatch<any> = useDispatch();
 
-    return <Todo
-    >
-        <TodoContentContainer>
-            <input type="checkbox" checked={props.completed} onChange={() => dispatch(ChangeCompletedState(props.index))} />
-            <span            >
-                {props.content}
-            </span>
-        </TodoContentContainer>
-        <DeleteButton
-            onClick={() => dispatch(DeleteTodo(props.index))}
-        ><i className="bi bi-trash"></i></DeleteButton>
-    </Todo>
+    return <AnimatePresence>
+        <Todo>
+            <TodoContentContainer>
+                <input type="checkbox" checked={props.completed} onChange={() => dispatch(ChangeCompletedState(props.index))} />
+                <span            >
+                    {props.content}
+                </span>
+            </TodoContentContainer>
+            <DeleteButton
+                onClick={() => dispatch(DeleteTodo(props.index))}
+            ><i className="bi bi-trash"></i></DeleteButton>
+        </Todo>
+    </AnimatePresence>
 }
