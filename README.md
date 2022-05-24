@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://todo-list-by-rafik.vercel.app/">
       Demo
     </a>
     <span> | </span>
@@ -36,14 +36,10 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
-
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+![screenshot](https://user-images.githubusercontent.com/66208417/170026155-7fa44c6e-2596-48dc-b0c0-63db03cc79c5.png)
 
 - Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+  You can see demo by clicking to demo button above or [click to this button](https://todo-list-by-rafik.vercel.app/)
 
 ### Built With
 
